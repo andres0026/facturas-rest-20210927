@@ -41,9 +41,9 @@ pipeline {
             steps{
                 script{
                     if(isUnix()){
-                        sh "docker run -d --name app-java -p 1080:8080 areyes/app-java"
+                        sh "docker run -d --name app-java -p 1800:8080 areyes/app-java"
                     }else{
-                        bat "docker run -d --name app-java -p 1080:8080 areyes/app-java"
+                        bat "docker run -d --name app-java -p 1800:8080 areyes/app-java"
                     }
 
                 }          
