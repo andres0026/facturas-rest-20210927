@@ -7,7 +7,7 @@ pipeline {
 
         stage ("Descarga el código de la aplicación") {
             steps {
-                git "https://github.com/jesuscle/junitmavenexample"
+                git "https://github.com/andres0026/facturas-rest-20210927.git"
             }
         }
 
@@ -41,9 +41,9 @@ pipeline {
             steps{
                 script{
                     if(isUnix()){
-                        sh "docker run -d --name app-java -p 8081:8080 areyes/app-java"
+                        sh "docker run -d --name app-java -p 1080:8080 areyes/app-java"
                     }else{
-                        bat "docker run -d --name app-java -p 8081:8080 areyes/app-java"
+                        bat "docker run -d --name app-java -p 1080:8080 areyes/app-java"
                     }
 
                 }          
