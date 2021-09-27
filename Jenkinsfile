@@ -1,7 +1,7 @@
 pipeline {
     
     agent any
-    
+        
     stages {
 
         stage ("Descarga el código de la aplicación") {
